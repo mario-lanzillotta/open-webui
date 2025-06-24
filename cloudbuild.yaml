@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        docker pull ghcr.io/open-webui/open-webui:main
+        docker tag ghcr.io/open-webui/open-webui:main us-central1-docker.pkg.dev/aqgprag/openwebui-docker/open-webui:main
+        docker push us-central1-docker.pkg.dev/aqgprag/openwebui-docker/open-webui:main
+images:
+  - 'us-central1-docker.pkg.dev/aqgprag/openwebui-docker/open-webui:main'
