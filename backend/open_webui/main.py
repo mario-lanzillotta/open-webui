@@ -4,6 +4,9 @@ import json
 import logging
 import mimetypes
 import os
+
+# LOG THE VALUE OF OPENWEBUI_API_KEY at startup
+print(f"[CLOUD RUN DEBUG] OPENWEBUI_API_KEY = {os.environ.get('OPENWEBUI_API_KEY')}")
 import shutil
 import sys
 import time
